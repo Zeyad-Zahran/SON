@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SON AI Model 😁</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><i class="fas fa-smile"></i> Smile or Not AI Model</h1>
+      <div class="controls">
+        <button id="themeToggle" class="btn btn-outline">
+          <i class="fas fa-moon"></i> Theme
+        </button>
+        <button id="helpBtn" class="btn">
+          <i class="fas fa-question-circle"></i> Help
+        </button>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="video-container">
+        <video id="webcam" autoplay playsinline width="400" height="300"></video>
+        <div id="prediction">
+          <div class="loader"></div> Loading model...
+        </div>
+        <div class="confidence-meter">
+          <div class="confidence-fill" id="confidenceFill"></div>
+        </div>
+        <div class="confidence-labels">
+          <span>0%</span>
+          <span>50%</span>
+          <span>100%</span>
+        </div>
+      </div>
+      
+      <div class="stats-container">
+        <div class="stat-box">
+          <div class="stat-title"><i class="fas fa-chart-line"></i> Smile Probability</div>
+          <div class="smile-count" id="smilePercent">0%</div>
+          <div>Based on last 5 detections</div>
+        </div>
+        
+        <div class="stat-box">
+          <div class="stat-title"><i class="fas fa-history"></i> Recent History</div>
+          <div class="history-graph" id="historyGraph"></div>
+        </div>
+        
+        <div class="stat-box">
+          <div class="stat-title"><i class="fas fa-list"></i> Detection Log</div>
+          <div class="history-container" id="historyContainer"></div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <p>Made with <i class="fas fa-heart" style="color: #ef4444;"></i> By Zeyad Zahran</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="script.js"></script>
+</body>
+</html>
