@@ -38,6 +38,7 @@ It consists of:
 When the webpage loads:
 - TensorFlow.js reads `model.json` to reconstruct the network.
 
-- Developed By Zeyad Zahran
 - Loads the learned weights from `weights.bin`.
 - Uses `metadata.json` to map outputs into human-readable labels.  
+
+  Developed By Zeyad Zahran
